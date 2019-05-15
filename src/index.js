@@ -1,12 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import {Linkki} from './Linkki';
+import {LinkSet} from './LinkSet';
+import DataCard from './DataCard';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const Hello = (props) => {
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+    return(
+        <div>
+            <p>hello {props.name}</p>
+        </div>
+    )
+}
+
+
+
+const App = () => {
+    const now = new Date();
+    return (
+    <div>
+        <p>fitnessLogger, started {now.toString()}</p>
+        <Hello name="test"/>
+        <Linkki/>
+        <LinkSet/>
+        <DataCard/>
+    </div>
+    )
+}
+ReactDOM.render(<App />, document.getElementById('root'))

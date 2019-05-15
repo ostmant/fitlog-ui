@@ -1,0 +1,4 @@
+input {background-color: red;}
+
+tr:nth-child(even) {background-color: lightblue;}
+tr:nth-child(odd) {background-color: lightseagreen;}
