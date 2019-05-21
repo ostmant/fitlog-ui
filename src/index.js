@@ -1,30 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Linkki} from './Linkki';
-import {LinkSet} from './LinkSet';
-import DataCard from './DataCard';
+import {Container} from 'semantic-ui-react';
+import 'semantic-ui-css/semantic.min.css';
 
-const Hello = (props) => {
-
-    return(
-        <div>
-            <p>hello {props.name}</p>
-        </div>
-    )
-}
-
-
+import {ExerciseSet} from './ExerciseSet';
 
 const App = () => {
     const now = new Date();
     return (
-    <div>
-        <p>fitnessLogger, started {now.toString()}</p>
-        <Hello name="test"/>
-        <Linkki/>
-        <LinkSet/>
-        <DataCard/>
-    </div>
+    <Container >
+        fitnessLogger, started {now.toString()}
+        <br/>
+        <ExerciseSet/>
+    </Container>
     )
-}
+    }
 ReactDOM.render(<App />, document.getElementById('root'))

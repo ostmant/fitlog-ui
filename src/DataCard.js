@@ -1,5 +1,6 @@
 import React from 'react';
 import './test.css';    
+import { Button, Checkbox, Form } from 'semantic-ui-react'
 
 class DataCard extends React.Component{
     constructor(props) {
@@ -29,7 +30,8 @@ class DataCard extends React.Component{
 
     render() {
         return (
-            <form>
+            <Form>
+                <Form.Field>
                 <label>
                     Exercise done: 
                     <input 
@@ -38,7 +40,9 @@ class DataCard extends React.Component{
                      checked={this.state.done}
                      onChange={this.handleInputChange}/>
                 </label>
+                </Form.Field>
                 <br/>
+                <Form.Field>
                 <label>
                     Description: 
                     <input 
@@ -47,7 +51,9 @@ class DataCard extends React.Component{
                     onChange={this.handleDescriptionChange}
                     />
                 </label>
-            </form>
+                </Form.Field>
+                <Form.Field><Button type='submit'>Tallenna</Button></Form.Field>
+            </Form>
         );
     }
 }

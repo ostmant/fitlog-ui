@@ -1,11 +1,9 @@
 import React from 'react';
 
 
-export const Linkki = () => {
+export const Linkki = (props) => {
 
     return (
-        <div>
-            <a href="http://yle.fi">linkki</a>
-        </div>
+            <a href={props.target}>linkki</a>
     )
 }

@@ -1,22 +1,38 @@
 import React from 'react';
 import {Linkki} from './Linkki';
-import './test.css';   
+import {Table} from 'react-bootstrap';
+
 
 export const LinkSet = () =>{
+ 
     return (
         <div>
-            <table>
-                <th>Linkit:</th>
+            <Table striped>
+                <thead>
+                    <tr>
+                    <th>Linkit:</th>
+                    </tr>
+                
+                </thead>
+                <tbody>  
                 <tr>
-                    <Linkki/>
+                    <td>Kohde:</td>
+                    <td>
+                    <Linkki target="https://turkuamk.fi"/>
+                    </td>
                 </tr>
                 <tr>
+                <td>
                     <Linkki/>
+                    </td>
                 </tr>
                 <tr>
+                <td>
                     <Linkki/>
+                </td>
                 </tr>
-            </table>
+                </tbody> 
+            </Table>
         </div>
     )
 }
