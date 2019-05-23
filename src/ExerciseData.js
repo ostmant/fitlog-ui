@@ -29,7 +29,7 @@ export default class ExersiceList extends React.Component{
         let caller = e.target.className;
         if (caller.includes("delete")){console.log("Delete")}
         else  console.log("Update")
-        
+        b
         
        
     }
