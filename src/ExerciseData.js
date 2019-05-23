@@ -30,7 +30,6 @@ export default class ExersiceList extends React.Component{
         if (caller.includes("delete")){console.log("Delete")}
         else  console.log("Update")
         
-        console.log(this.state.exercises[0].id)
         
        
     }
