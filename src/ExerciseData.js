@@ -1,5 +1,6 @@
 import React from 'react';
-import { Table} from 'semantic-ui-react'
+import { Table,Button} from 'semantic-ui-react'
+
 
 
 import axios from 'axios';
@@ -11,6 +12,7 @@ export default class ExersiceList extends React.Component{
         this.state = {
             exercises: []
         };
+        
       }
   
 
@@ -23,13 +25,20 @@ export default class ExersiceList extends React.Component{
         this.setState({exercises: [...this.state.exercises, ...exercisesData]});
       })
   }
-  
+    handleClick(e) {
+        let caller = e.target.className;
+        if (caller.includes("delete")){console.log("Delete")}
+        else  console.log("Update")
+        
+        console.log(this.state.exercises[0].id)
+        
+       
+    }
     render () {
     console.log(this.state.exercises)
     return (
      <React.Fragment>
-          {this.state.exercises.map(exercise =>(<Table.Row key={exercise.id}><Table.Cell>{exercise.description}</Table.Cell><Table.Cell>{exercise.date}</Table.Cell><Table.Cell>{exercise
-            .category}</Table.Cell></Table.Row>))}
+          {this.state.exercises.map(exercise =>(<Table.Row key={exercise.id}><Table.Cell>{exercise.description}</Table.Cell><Table.Cell>{exercise.date}</Table.Cell><Table.Cell><Button className="delete" onClick={this.handleClick}>Delete</Button><Button className="update" onClick={this.handleClick}>Update</Button></Table.Cell></Table.Row>))}
           </React.Fragment>
     )
     }

@@ -12,7 +12,7 @@ export const ExerciseSet = () => {
       <Table.Row>
         <Table.HeaderCell>Description</Table.HeaderCell>
         <Table.HeaderCell>Date</Table.HeaderCell>
-        <Table.HeaderCell>Category</Table.HeaderCell>
+        <Table.HeaderCell>Operation</Table.HeaderCell>
       </Table.Row>
     </Table.Header>
 
